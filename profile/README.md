@@ -11,13 +11,18 @@
 
 ### How our services work
 ```mermaid
-graph LR
-
-A(MongoDB)
-C --> A
-B((API)) --> D(Web Frontend)
-B((API)) --> C(Web Backend)
-C --> B
-A --> C
-D --> B
+flowchart LR
+	C("Web Backend\n(Express)") --> A("MongoDB")
+	B(("API")) --> D("Web Frontend\n(Angular)")
+	B --> C
+	C --> B
+	A --> C
+	D --> B
+	C --> 108697("Moduls")
+	108697 --> C
+	707316("Discord.js") --> 108697
+	472449("CanvaCard") --> 108697
+	250033("Twitch API") --> 108697
+	200431("Youtube API") --> 108697
+	351108("@espcustomss/oauth") --> 108697
 ```
